@@ -1,0 +1,40 @@
+extends layout
+block header
+	.w3-card-4
+		header.w3-container.w3-red
+			h1 FACEMARKET
+		.w3-container(style="padding: 16px;")
+			.w3-row
+				.w3-col.m6.l6
+					form(method="POST" action="/login" style="border-right: 3px solid #f1f1f1;")
+						.w3-container(style="text-align: center; margin: 24px 0 11px 0; padding: 16px;")
+							img(src="/images/logo.jpg" alt="Logo" class="logo" style="width: 33%; border-radius: 50%; text-align: center;") 
+						.w3-container(style="padding: 16px;")
+							label Email
+							input(type="text" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;" placeholder="Enter Email" name="email" required)
+
+							label Password
+							input(type="password" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;" placeholder="Enter Password" name="password" required)
+
+							input.w3-button(type="submit" style="background-color: gray; color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%;" value="Login")
+				.w3-col.m6.l6
+					form(method="POST" action="/register")
+						.w3-container(style="padding: 16px; border-style: none;")
+							br
+							br
+							br
+
+							h1 Sign Up
+							p Please fill in this form to create an account.
+
+							br
+							br
+							br
+							
+							label Email
+							input(type="text" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;" placeholder="Enter Email" name="email" required)
+							
+							label Password
+							input(type="password" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;" placeholder="Enter Password" name="password" required)
+							
+							input.w3-button(type="submit" style="background-color: gray; color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%;" value="Register")

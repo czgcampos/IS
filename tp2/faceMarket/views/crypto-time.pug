@@ -1,0 +1,20 @@
+extends header
+block content
+  .w3-container
+      h1= crypto
+      table.w3-table-all
+        tr
+          th Time
+          th Close
+          th High
+          th Low
+          th Volume From
+          th Volume To
+        each currency in answer
+          tr
+            td= currency.time
+            td= currency.close
+            td= currency.high
+            td= currency.low
+            td= currency.volumefrom
+            td= currency.volumeto

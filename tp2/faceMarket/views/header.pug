@@ -1,0 +1,137 @@
+extends layout
+block header
+	.w3-card-4
+		header.w3-container.w3-red
+			h1(style='display:inline-block') 
+				a.w3-button.w3-dark-red(href='http://localhost:4770/') FACEMARKET
+			h1(style='display:inline-block;float:right')
+				a.w3-button.w3-dark-red(href='http://localhost:4770/logout') Logout
+		.w3-container
+			.w3-row
+					form.w3-container(method='POST' action='/search')
+						.w3-row-padding
+							.w3-third 
+								h1(style="font-size: 25px") Choose market:
+								div(id='marketRadio')
+									.w3-checkbox
+										input(type = "radio" name = "market" value = "commodity" id='commodityRadio' checked)
+										label(for='commodityRadio')  Commodities
+									.w3-checkbox
+										input(type = "radio" name = "market" value = "crypto" id='cryptoRadio')
+										label(for='cryptoRadio')  Crypto
+									.w3-checkbox
+										input(type = "radio" name = "market" value = "forex" id='forexRadio')
+										label(for='forexRadio')  Forex
+									.w3-checkbox
+										input(type = "radio" name = "market" value = "stock" id='stockRadio')
+										label(for='stockRadio')  Stocks
+							.w3-third
+								select(name='commodity' style='margin-top:60px' id='commodityList')
+									option(value='Gold') Gold
+									option(value='Silver') Silver
+									option(value='Platinum') Platinum
+									option(value='Paladium') Paladium
+									option(value='Copper') Copper
+									option(value='Oil') Oil
+									option(value='Natural Gas') Natural Gas
+								select(name='crypto' style='margin-top:60px' id='criyptoList')
+									option(value='BTC') Bitcoin
+									option(value='XRP') XRP
+									option(value='ETH') Ethereum
+									option(value='LTC') Litecoin
+									option(value='BCH') Bitcoin Cash
+									option(value='EOS') EOS
+									option(value='CRO') Crypto.com Chain
+									option(value='AION') Aion
+									option(value='BRC') Baer Chain
+									option(value='BNB') Binance Coin
+								select(name='forex1' style='margin-top:50px' id='forex1List')
+									option(value='USD') US dollar
+									option(value='EUR') Euro
+									option(value='JPY') Japanese yen
+									option(value='GBP') Pound sterling
+									option(value='AUD') Australian dollar
+									option(value='CAD') Canadian dollar
+									option(value='CHF') Swiss franc
+									option(value='CNH') Chinese renminbi
+									option(value='SEK') Swedish krona
+									option(value='NZD') New Zealand dollar
+								select(name='forex2' style='margin-top:60px' id='forex2List')
+									option(value='USD') US dollar
+									option(value='EUR') Euro
+									option(value='JPY') Japanese yen
+									option(value='GBP') Pound sterling
+									option(value='AUD') Australian dollar
+									option(value='CAD') Canadian dollar
+									option(value='CHF') Swiss franc
+									option(value='CNH') Chinese renminbi
+									option(value='SEK') Swedish krona
+									option(value='NZD') New Zealand dollar
+								select(name='stock' style='margin-top:60px' id='stockList')
+									option(value='FB') Facebook
+									option(value='BUD') Anheuser-Busch InBev
+									option(value='ANTM') Anthem
+									option(value='BCS') Barclays
+									option(value='BHC') Bausch Health
+									option(value='BXP-PB') Boston Properties
+									option(value='CGC') Canopy Growth
+									option(value='CBS') CBS Corparation
+									option(value='CPYYY') Centrica pl
+									option(value='CHKGF') CK Asset Holdings Limited
+									option(value='CMCSA') Comcast Corporation
+									option(value='DELL') Dell Technologies Inc.
+									option(value='DB') Deutsche Bank Aktiengesellschaft
+									option(value='ETP-PD') Energy Transfer Partners, L.P. PFD UNIT SER D
+									option(value='FRCOY') Fast Retailing Co. Ltd.
+									option(value='F') Ford Motor Company
+									option(value='GE') General Electric Company
+									option(value='GILD') Gilead Sciences Inc.
+									option(value='HMSN') Hammerson plc
+									option(value='HOG') Harley-Davidson Inc.
+									option(value='INDIGO.NSE') InterGlobe Aviation Limited
+									option(value='IQV') IQVIA Holdings Inc.
+									option(value='ITVI') ITVI
+									option(value='JCI') Johnson Controls International plc
+									option(value='PPRUY') Kering SA
+									option(value='KNX') Knight-Swift Transportation Holdings Inc.
+									option(value='KR') The Kroger Co.
+									option(value='LB') L Brands Inc.
+									option(value='LEN') Lennar Corporation
+									option(value='MFC') Manulife Financial Corporation
+									option(value='MPC') Marathon Petroleum Corporation
+									option(value='MDR') McDermott International Inc.
+									option(value='NIKE') NIKE Inc.
+									option(value='NXPI') NXP Semiconductors N.V.
+									option(value='OSAGY') Osram Licht AG
+									option(value='BRDT3.SAO') Petrobras Distribuidora S.A.
+									option(value='PUK') Prudential plc
+									option(value='PYX') Pyxus International Inc.
+									option(value='RRC') Range Resources Corporation
+									option(value='OJSCY') Public Joint Stock Company Rosneft Oil Company
+									option(value='SFTBY') SoftBank Group Corp.
+									option(value='SYF') Synchrony Financial
+									option(value='DATA') Tableau Software Inc
+									option(value='TLSA') Tesla Inc.
+									option(value='TEVA') Teva Pharmaceutical Industries Limited
+									option(value='VOD') Vodafone Group Plc
+									option(value='WAB') Wabtec Corporation
+									option(value='WPP') WPP plc
+									option(value='XYL') Xylem Inc.
+									option(value='AAPL') Apple Inc.
+							.w3-third 
+								h1(style="font-size: 25px") Choose periodicity:
+								.w3-checkbox
+									input(type = "radio" name = "periodicity" value = "hourly" checked id='hourlyRadio')
+									label(for='hourlyRadio')  Hourly
+								.w3-checkbox
+									input(type = "radio" name = "periodicity" value = "daily" id='dailyRadio')
+									label(for='dailyRadio')  Daily
+								.w3-checkbox
+									input(type = "radio" name = "periodicity" value = "weekly" id='weeklyRadio')
+									label(for='weeklyRadio')  Weekly
+								.w3-checkbox
+									input(type = "radio" name = "periodicity" value = "monthly" id='monthlyRadio')
+									label(for='monthlyRadio')  Monthly
+						input.w3-button.w3-gray.w3-right.w3-round-xxlarge(type="submit" value="Submit" style='padding:8px 29px')
+					hr
+					block content

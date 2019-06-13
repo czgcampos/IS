@@ -1,0 +1,27 @@
+extends header
+block content
+  .w3-container
+      h1= commodity
+      table.w3-table-all
+        tr
+          th Date
+          th Open
+          th High
+          th Low
+          th Last
+          th Change
+          th Settle
+          th Volume
+          th Prev. Day Open Interest
+        each com in answer
+          tr
+            td= com[0]
+            td= com[1]
+            td= com[2]
+            td= com[3]
+            td= com[4]
+            td= com[5]
+            td= com[6]
+            td= com[7]
+            td= com[8]
+          

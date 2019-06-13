@@ -1,0 +1,22 @@
+extends header
+block content
+  .w3-container
+    each value, index in answer
+      if index == "Meta Data"
+        h1=value["2. From Symbol"]+"/"+value["3. To Symbol"]
+        h3=value["1. Information"]
+      else
+        table.w3-table-all
+          tr
+            th Date
+            th Open
+            th High
+            th Low
+            th Close 
+          each val, idx in value
+            tr
+              td= idx
+              td= val["1. open"]
+              td= val["2. high"]
+              td= val["3. low"]
+              td= val["4. close"]

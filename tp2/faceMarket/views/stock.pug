@@ -1,0 +1,130 @@
+extends header
+block content
+  .w3-container
+    each value, index in answer
+      if index == "Meta Data"
+        if value["2. Symbol"] == "BUD" 
+          h1="Anheuser-Busch InBev"
+        if value["2. Symbol"] == "FB" 
+          h1="Facebook" 
+        if value["2. Symbol"] == "ANTM" 
+          h1="Anthem" 
+        if value["2. Symbol"] == "BCS" 
+           h1="Barclays"
+        if value["2. Symbol"] == "BHC" 
+           h1="Bausch Health"
+        if value["2. Symbol"] == "BXP-PB" 
+           h1="Boston Properties"
+        if value["2. Symbol"] == "CGC" 
+           h1="Canopy Growth"
+        if value["2. Symbol"] == "CBS" 
+           h1="CBS Corparation"
+        if value["2. Symbol"] == "CPYYY" 
+           h1="Centrica pl"
+        if value["2. Symbol"] == "CHKGF" 
+           h1="CK Asset Holdings Limited"
+        if value["2. Symbol"] == "CMCSA" 
+           h1="Comcast Corporation"
+        if value["2. Symbol"] == "DELL" 
+           h1="Dell Technologies Inc."
+        if value["2. Symbol"] == "DB" 
+           h1="Deutsche Bank Aktiengesellschaft"
+        if value["2. Symbol"] == "ETP-PD" 
+           h1="Energy Transfer Partners, L.P."
+        if value["2. Symbol"] == "FRCOY" 
+           h1="Fast Retailing Co. Ltd."
+        if value["2. Symbol"] == "F" 
+           h1="Ford Motor Company"
+        if value["2. Symbol"] == "GE" 
+           h1="General Electric Company"
+        if value["2. Symbol"] == "GILD" 
+           h1="Gilead Sciences Inc."
+        if value["2. Symbol"] == "HMSN" 
+           h1="Hammerson plc"
+        if value["2. Symbol"] == "HOG" 
+           h1="Harley-Davidson Inc."
+        if value["2. Symbol"] == "INDIGO.NSE" 
+           h1="InterGlobe Aviation Limited"
+        if value["2. Symbol"] == "IQV" 
+           h1="IQVIA Holdings Inc."
+        if value["2. Symbol"] == "ITVI" 
+           h1="ITVI"
+        if value["2. Symbol"] == "JCI" 
+           h1="Johnson Controls International plc"
+        if value["2. Symbol"] == "PPRUY" 
+           h1="Kering SA"
+        if value["2. Symbol"] == "KNX" 
+           h1="Knight-Swift Transportation Holdings Inc."
+        if value["2. Symbol"] == "KR" 
+           h1="The Kroger Co."
+        if value["2. Symbol"] == "LB" 
+           h1="L Brands Inc."
+        if value["2. Symbol"] == "LEN" 
+           h1="Lennar Corporation"
+        if value["2. Symbol"] == "MFC" 
+           h1="Manulife Financial Corporation"
+        if value["2. Symbol"] == "MPC" 
+           h1="Marathon Petroleum Corporation"
+        if value["2. Symbol"] == "MDR" 
+           h1="McDermott International Inc."
+        if value["2. Symbol"] == "NIKE" 
+           h1="NIKE Inc."
+        if value["2. Symbol"] == "NXPI" 
+           h1="NXP Semiconductors N.V."
+        if value["2. Symbol"] == "OSAGY" 
+           h1="Osram Licht AG"
+        if value["2. Symbol"] == "BRDT3.SAO" 
+           h1="Petrobras Distribuidora S.A."
+        if value["2. Symbol"] == "PUK" 
+           h1="Prudential plc"
+        if value["2. Symbol"] == "PYX" 
+           h1="Pyxus International Inc."
+        if value["2. Symbol"] == "RRC" 
+           h1="Range Resources Corporation"
+        if value["2. Symbol"] == "OJSCY" 
+           h1="Public Joint Stock Company Rosneft Oil Company"
+        if value["2. Symbol"] == "SFTBY" 
+           h1="SoftBank Group Corp."
+        if value["2. Symbol"] == "SYF" 
+           h1="Synchrony Financial"
+        if value["2. Symbol"] == "DATA" 
+           h1="Tableau Software Inc."
+        if value["2. Symbol"] == "TLSA" 
+           h1="Tesla Inc."
+        if value["2. Symbol"] == "TEVA" 
+           h1="Teva Pharmaceutical Industries Limited"
+        if value["2. Symbol"] == "VOD" 
+           h1="Vodafone Group Plc"
+        if value["2. Symbol"] == "WAB" 
+           h1="Wabtec Corporation"
+        if value["2. Symbol"] == "WPP" 
+           h1="WPP Plc"
+        if value["2. Symbol"] == "XYL" 
+           h1="Xylem Inc."
+        if value["2. Symbol"] == "XYL" 
+           h1="Xylem Inc."
+        if value["2. Symbol"] == "AAPL" 
+           h1="Apple Inc."
+        h3=value["1. Information"]
+      else
+        table.w3-table-all
+          tr
+            th Date
+            th Open
+            th High
+            th Low
+            th Close
+            th Volume
+          each val, idx in value
+            tr
+              td= idx
+              td= val["1. open"]
+              td= val["2. high"]
+              td= val["3. low"]
+              td= val["4. close"]
+              td= val["5. volume"]
+
+
+      
+         
+           

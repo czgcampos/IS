@@ -1,0 +1,20 @@
+extends header
+block content
+  .w3-container
+      h1 Top 10 Cryptocurrencies by Market Capitalization
+      table.w3-table-all
+        tr
+          th Name
+          th Market Cap
+          th Price
+          th Volume (24h)
+          th Circulating Supply
+          th Change (24h)
+        each currency in answer
+          tr
+            td= currency.CoinInfo.Name
+            td= currency.RAW.USD.MKTCAP
+            td= currency.RAW.USD.PRICE
+            td= currency.RAW.USD.VOLUME24HOUR
+            td= currency.RAW.USD.SUPPLY
+            td= currency.RAW.USD.CHANGEPCT24HOUR
